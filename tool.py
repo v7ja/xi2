@@ -125,8 +125,16 @@ def checker(username,client):
 # for generate username
 def usernameG():
 	k = ''.join(choice('qwertyuiopasdfghjklzxcvbnm') for i in range(1))
-	n = ''.join(choice('1234567890') for i in range(2))
-	return 'vip'+'0974'
+	n = ''.join(choice('1234567890') for i in range(1))
+    nn = ''.join(choice('1234567890') for i in range(1))
+	v1 = k+n+n+"_"+k
+	v2 = k+n+n+"_"+n
+	v3 = k+k+"_"+n+n
+	v4 = k+k+k+n+nn
+	v5 = k+"_"+k+n+n
+	ls = (v1,v2,v3,v4,v5)
+	u = choice(ls)
+	return u
 # start checking
 def start(client,username):
 	try:ok = fragment(username)
